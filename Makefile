@@ -8,7 +8,7 @@ clean:
 	rm -f db *.db
 
 test: db
-	bundle exec rspec
+	bundle3.1 exec rspec
 
 format: *.c
 	clang-format -style=Google -i *.c
