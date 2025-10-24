@@ -5,8 +5,9 @@ RUN apt-get update \
         build-essential \
         ruby-full \
         git \
-    && gem install bundler \
-    && rm -rf /var/lib/apt/lists/*
+    && rm -rf /var/lib/apt/lists/* \
+    && gem install bundler rspec
+    
 
 # Enable colorized prompt
 RUN echo 'export PS1="\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ "' >> /root/.bashrc \
